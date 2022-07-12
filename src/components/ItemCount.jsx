@@ -1,0 +1,45 @@
+import { useState } from "react";
+
+const ItemCount = (props) => {
+  const [count, setCount] = useState(props.init);
+
+  const addItem = () => {
+    if (props.stock > count) {
+      setCount(count + 1);
+    }
+  };
+
+  const removeItem = () => {
+    if (count > 0) {
+      setCount(count - 1);
+    }
+  };
+
+  return (
+    <div className="container mt-5">
+      <div className="row">
+        <div className="col-sm-5"></div>
+        <div className="col-sm-2 col-sm-offset-2">
+          <div className="input-group mb-3">
+            <button className="btn btn-info btn-sm" onClick={removeItem}>
+              -
+            </button>
+            <div className="form-control form-control-sm">{count}</div>
+            <button className="btn btn-info btn-sm" onClick={addItem}>
+              +
+            </button>
+          </div>
+          <button
+            className="btn btn-info btn-sm col-sm-12"
+            onClick={() => props.onAdd(count)}
+          >
+            Add to cart
+          </button>
+        </div>
+        <div className="col-sm-5"></div>
+      </div>
+    </div>
+  );
+};
+
+export default ItemCount;
