@@ -10,7 +10,7 @@ const ItemCount = (props) => {
   };
 
   const removeItem = () => {
-    if (count > 0) {
+    if (count > 1) {
       setCount(count - 1);
     }
   };
