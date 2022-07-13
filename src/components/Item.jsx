@@ -14,7 +14,11 @@ const Item = (props) => {
               <div className="row">
                 <div className="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
                   <div className="bg-image hover-zoom ripple rounded ripple-surface">
-                    <img src={props.itemData["item-image"]} className="w-100" />
+                    <img
+                      src={props.itemData["item-image"]}
+                      alt={props.itemData["item-name"]}
+                      className="w-100"
+                    />
                     <a href="#!">
                       <div className="hover-overlay">
                         <div className="mask"></div>

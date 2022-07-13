@@ -1,37 +1,34 @@
 import products from "../data/MOCK_DATA.json";
 import { useState, useEffect } from "react";
-import ItemList from "./ItemList";
-import ItemDetailContainer from "./ItemDetailContainer";
+import ItemDetail from "./ItemDetail";
 
-const ItemListContainer = (props) => {
-  const [productList, setProductList] = useState([]);
+const ItemDetailContainer = () => {
+  const [product, setProduct] = useState();
   const [spinner, setSpinner] = useState(false);
 
-  const getProductList = useEffect(() => {
+  const getProduct = useEffect(() => {
     setSpinner(true);
     new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(products);
+        resolve(products[0]);
       }, 2000);
     }).then((res) => {
       setSpinner(false);
-      setProductList(res);
+      setProduct(res);
     });
   }, []);
 
   return (
     <div className="container mt-3">
-      <h1>{props.title}</h1>
       {spinner ? (
         <div className="d-flex justify-content-center">
           <div className="spinner-border" role="status" />
         </div>
       ) : (
-        <ItemList items={productList} />
+        <ItemDetail item={product} />
       )}
-      <ItemDetailContainer />
     </div>
   );
 };
 
-export default ItemListContainer;
+export default ItemDetailContainer;
