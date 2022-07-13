@@ -18,8 +18,7 @@ const ItemCount = (props) => {
   return (
     <div className="container mt-5">
       <div className="row">
-        <div className="col-sm-5"></div>
-        <div className="col-sm-2 col-sm-offset-2">
+        <div className="col-sm-12">
           <div className="input-group mb-3">
             <button className="btn btn-info btn-sm" onClick={removeItem}>
               -
@@ -36,7 +35,6 @@ const ItemCount = (props) => {
             Add to cart
           </button>
         </div>
-        <div className="col-sm-5"></div>
       </div>
     </div>
   );

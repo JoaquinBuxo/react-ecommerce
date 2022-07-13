@@ -1,14 +1,22 @@
-import ItemCount from "./ItemCount";
+import products from "../data/MOCK_DATA.json";
+import { useState } from "react";
+import ItemList from "./ItemList";
 
 const ItemListContainer = (props) => {
-  const onAdd = (numProducts) => {
-    console.log(`Have been added ${numProducts} products to the cart`);
-  };
+  const [productList, setProductList] = useState([]);
+
+  const getProductList = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(products);
+    }, 2000);
+  });
+
+  getProductList.then((res) => setProductList(res));
 
   return (
     <div className="container mt-3">
-      <h1>{props.greeting}</h1>
-      <ItemCount stock={5} init={1} onAdd={onAdd} />
+      <h1>{props.title}</h1>
+      <ItemList items={productList} />
     </div>
   );
 };
