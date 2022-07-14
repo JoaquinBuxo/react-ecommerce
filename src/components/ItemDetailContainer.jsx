@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
-  const [product, setProduct] = useState();
+  const [product, setProduct] = useState([]);
   const [spinner, setSpinner] = useState(false);
 
   const getProduct = useEffect(() => {

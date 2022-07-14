@@ -1,9 +1,4 @@
-import ItemCount from "./ItemCount";
-
 const Item = (props) => {
-  const onAdd = (numProducts) => {
-    console.log(`Have been added ${numProducts} products to the cart`);
-  };
 
   return (
     <div className="container">
@@ -37,7 +32,6 @@ const Item = (props) => {
                     <h4 className="mb-1 me-1">
                       {props.itemData["item-price"]}
                     </h4>
-                    <ItemCount stock={5} init={1} onAdd={onAdd} />
                   </div>
                 </div>
               </div>
