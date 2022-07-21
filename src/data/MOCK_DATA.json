@@ -2,71 +2,81 @@
   {
     "id": 1,
     "item-image": "http://dummyimage.com/200x100.png/dddddd/000000",
-    "item-name": "Spider, wolf",
+    "item-name": "Spider, wolf (SNEAKER)",
     "item-description": "interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget",
-    "item-price": "$11.34"
+    "item-price": "$11.34",
+    "category-id": "sneakers"
   },
   {
     "id": 2,
     "item-image": "http://dummyimage.com/223x100.png/5fa2dd/ffffff",
-    "item-name": "Deer, barasingha",
+    "item-name": "Deer, barasingha (SNEAKER)",
     "item-description": "in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula",
-    "item-price": "$42.31"
+    "item-price": "$42.31",
+    "category-id": "sneakers"
   },
   {
     "id": 3,
     "item-image": "http://dummyimage.com/144x100.png/5fa2dd/ffffff",
-    "item-name": "Dove, ring",
+    "item-name": "Dove, ring (SNEAKER)",
     "item-description": "pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum",
-    "item-price": "$22.34"
+    "item-price": "$22.34",
+    "category-id": "sneakers"
   },
   {
     "id": 4,
     "item-image": "http://dummyimage.com/230x100.png/dddddd/000000",
-    "item-name": "Yellow-throated sandgrouse",
+    "item-name": "Yellow-throated sandgrouse (BACKPACK)",
     "item-description": "justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo",
-    "item-price": "$15.72"
+    "item-price": "$15.72",
+    "category-id": "backpacks"
   },
   {
     "id": 5,
     "item-image": "http://dummyimage.com/184x100.png/ff4444/ffffff",
-    "item-name": "Great kiskadee",
+    "item-name": "Great kiskadee (BACKPACK)",
     "item-description": "id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla",
-    "item-price": "$24.04"
+    "item-price": "$24.04",
+    "category-id": "backpacks"
   },
   {
     "id": 6,
     "item-image": "http://dummyimage.com/146x100.png/5fa2dd/ffffff",
-    "item-name": "Kirk's dik dik",
+    "item-name": "Kirk's dik dik (BACKPACK)",
     "item-description": "nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis",
-    "item-price": "$34.11"
+    "item-price": "$34.11",
+    "category-id": "backpacks"
   },
   {
     "id": 7,
     "item-image": "http://dummyimage.com/101x100.png/cc0000/ffffff",
-    "item-name": "Gecko, tokay",
+    "item-name": "Gecko, tokay (BACKPACK)",
     "item-description": "id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget",
-    "item-price": "$11.95"
+    "item-price": "$11.95",
+    "category-id": "backpacks"
   },
   {
     "id": 8,
     "item-image": "http://dummyimage.com/174x100.png/5fa2dd/ffffff",
-    "item-name": "Cape clawless otter",
+    "item-name": "Cape clawless otter (BACKPACK)",
     "item-description": "consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit",
-    "item-price": "$30.13"
+    "item-price": "$30.13",
+    "category-id": "backpacks"
   },
   {
     "id": 9,
     "item-image": "http://dummyimage.com/129x100.png/dddddd/000000",
-    "item-name": "African buffalo",
+    "item-name": "African buffalo (ACCESORIES)",
     "item-description": "viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut",
-    "item-price": "$24.01"
+    "item-price": "$24.01",
+    "category-id": "accesories"
   },
   {
     "id": 10,
     "item-image": "http://dummyimage.com/151x100.png/5fa2dd/ffffff",
-    "item-name": "Woodpecker, red-headed",
+    "item-name": "Woodpecker, red-headed (ACCESORIES)",
     "item-description": "eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed",
-    "item-price": "$33.78"
+    "item-price": "$33.78",
+    "category-id": "accesories"
   }
 ]

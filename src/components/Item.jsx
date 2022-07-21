@@ -1,7 +1,8 @@
-const Item = (props) => {
+import { Link } from "react-router-dom";
 
+const Item = (props) => {
   return (
-    <div className="container">
+    <Link to={`/item/${props.itemData["id"]}`} className="container">
       <div className="row justify-content-center mb-3">
         <div className="col-md-12 col-xl-10">
           <div className="card shadow-0 border rounded-3">
@@ -14,11 +15,9 @@ const Item = (props) => {
                       alt={props.itemData["item-name"]}
                       className="w-100"
                     />
-                    <a href="#!">
-                      <div className="hover-overlay">
-                        <div className="mask"></div>
-                      </div>
-                    </a>
+                    <div className="hover-overlay">
+                      <div className="mask"></div>
+                    </div>
                   </div>
                 </div>
                 <div className="col-md-6 col-lg-6 col-xl-6">
@@ -39,7 +38,7 @@ const Item = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

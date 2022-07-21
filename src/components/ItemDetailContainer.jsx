@@ -1,16 +1,18 @@
 import products from "../data/MOCK_DATA.json";
 import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
   const [spinner, setSpinner] = useState(false);
+  const { itemId } = useParams();
 
-  const getProduct = useEffect(() => {
+  useEffect(() => {
     setSpinner(true);
     new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(products[0]);
+        resolve(products.find((item) => item["id"] === parseInt(itemId)));
       }, 2000);
     }).then((res) => {
       setSpinner(false);

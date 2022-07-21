@@ -1,6 +1,5 @@
 import ItemCount from "./ItemCount";
 
-
 const onAdd = (numProducts) => {
   console.log(`Have been added ${numProducts} products to the cart`);
 };
