@@ -1,10 +1,14 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 
-const onAdd = (numProducts) => {
-  console.log(`Have been added ${numProducts} products to the cart`);
-};
-
 const ItemDetail = (props) => {
+  const [numProducts, setNumProducts] = useState(0);
+
+  const onAdd = (count) => {
+    setNumProducts(count);
+  };
+
   return (
     <div className="container-fluid mt-2 mb-3">
       <div className="row no-gutters">
@@ -26,7 +30,17 @@ const ItemDetail = (props) => {
               </span>
               <h4 className="font-weight-bold">{props.item["item-price"]}</h4>
             </div>
-            <ItemCount stock={5} init={1} onAdd={onAdd} />
+            {numProducts > 0 ? (
+              <Link to="/cart">
+                <button type="button">CART</button>
+              </Link>
+            ) : (
+              <ItemCount
+                stock={props.item["item-stock"]}
+                init={1}
+                onAdd={onAdd}
+              />
+            )}
             <hr />
             <div className="product-description">
               <div className="mt-2">

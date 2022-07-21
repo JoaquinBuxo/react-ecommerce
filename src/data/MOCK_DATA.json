@@ -5,6 +5,7 @@
     "item-name": "Spider, wolf (SNEAKER)",
     "item-description": "interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget",
     "item-price": "$11.34",
+    "item-stock": "9",
     "category-id": "sneakers"
   },
   {
@@ -13,6 +14,7 @@
     "item-name": "Deer, barasingha (SNEAKER)",
     "item-description": "in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula",
     "item-price": "$42.31",
+    "item-stock": "7",
     "category-id": "sneakers"
   },
   {
@@ -21,6 +23,7 @@
     "item-name": "Dove, ring (SNEAKER)",
     "item-description": "pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum",
     "item-price": "$22.34",
+    "item-stock": "7",
     "category-id": "sneakers"
   },
   {
@@ -29,6 +32,7 @@
     "item-name": "Yellow-throated sandgrouse (BACKPACK)",
     "item-description": "justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo",
     "item-price": "$15.72",
+    "item-stock": "3",
     "category-id": "backpacks"
   },
   {
@@ -37,6 +41,7 @@
     "item-name": "Great kiskadee (BACKPACK)",
     "item-description": "id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla",
     "item-price": "$24.04",
+    "item-stock": "7",
     "category-id": "backpacks"
   },
   {
@@ -45,6 +50,7 @@
     "item-name": "Kirk's dik dik (BACKPACK)",
     "item-description": "nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis",
     "item-price": "$34.11",
+    "item-stock": "4",
     "category-id": "backpacks"
   },
   {
@@ -53,6 +59,7 @@
     "item-name": "Gecko, tokay (BACKPACK)",
     "item-description": "id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget",
     "item-price": "$11.95",
+    "item-stock": "6",
     "category-id": "backpacks"
   },
   {
@@ -61,6 +68,7 @@
     "item-name": "Cape clawless otter (BACKPACK)",
     "item-description": "consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit",
     "item-price": "$30.13",
+    "item-stock": "6",
     "category-id": "backpacks"
   },
   {
@@ -69,6 +77,7 @@
     "item-name": "African buffalo (ACCESORIES)",
     "item-description": "viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut",
     "item-price": "$24.01",
+    "item-stock": "8",
     "category-id": "accesories"
   },
   {
@@ -77,6 +86,7 @@
     "item-name": "Woodpecker, red-headed (ACCESORIES)",
     "item-description": "eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed",
     "item-price": "$33.78",
+    "item-stock": "3",
     "category-id": "accesories"
   }
 ]

@@ -19,6 +19,7 @@ const ItemCount = (props) => {
     <div className="container mt-5">
       <div className="row">
         <div className="col-sm-12">
+          <div>(Stock: {props.stock})</div>
           <div className="input-group mb-3">
             <button className="btn btn-info btn-sm" onClick={removeItem}>
               -
