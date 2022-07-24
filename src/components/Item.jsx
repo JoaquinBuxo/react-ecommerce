@@ -29,7 +29,7 @@ const Item = (props) => {
                 <div className="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                   <div className="d-flex flex-column align-items-center mb-1">
                     <h4 className="mb-1 me-1">
-                      {props.itemData["item-price"]}
+                      ${props.itemData["item-price"]}
                     </h4>
                   </div>
                 </div>

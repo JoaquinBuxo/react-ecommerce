@@ -25,13 +25,18 @@ const ItemCount = (props) => {
               -
             </button>
             <div className="form-control form-control-sm">{count}</div>
-            <button className="btn btn-info btn-sm" onClick={addItem}>
+            <button
+              className="btn btn-info btn-sm"
+              onClick={addItem}
+              disabled={props.stock === 0}
+            >
               +
             </button>
           </div>
           <button
             className="btn btn-info btn-sm col-sm-12"
             onClick={() => props.onAdd(count)}
+            disabled={props.stock === 0}
           >
             Add to cart
           </button>

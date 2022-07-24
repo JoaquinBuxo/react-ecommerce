@@ -1,12 +1,20 @@
+import { useContext } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
+import { CartContext } from "./CartContext";
 
 const ItemDetail = (props) => {
   const [numProducts, setNumProducts] = useState(0);
+  const context = useContext(CartContext);
 
-  const onAdd = (count) => {
-    setNumProducts(count);
+  const cartListItem = context.cartList.find(
+    (item) => item["id"] === props.item.id
+  );
+
+  const onAdd = (quantity) => {
+    setNumProducts(quantity);
+    context.addItem(props.item, quantity);
   };
 
   return (
@@ -28,7 +36,7 @@ const ItemDetail = (props) => {
               <span className="font-weight-bold">
                 {props.item["item-name"]}
               </span>
-              <h4 className="font-weight-bold">{props.item["item-price"]}</h4>
+              <h4 className="font-weight-bold">${props.item["item-price"]}</h4>
             </div>
             {numProducts > 0 ? (
               <Link to="/cart">
@@ -36,7 +44,10 @@ const ItemDetail = (props) => {
               </Link>
             ) : (
               <ItemCount
-                stock={props.item["item-stock"]}
+                stock={
+                  props.item["item-stock"] -
+                  (cartListItem ? cartListItem.quantity : 0)
+                }
                 init={1}
                 onAdd={onAdd}
               />
