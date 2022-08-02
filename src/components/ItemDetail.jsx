@@ -39,9 +39,14 @@ const ItemDetail = (props) => {
               <h4 className="font-weight-bold">${props.item["item-price"]}</h4>
             </div>
             {numProducts > 0 ? (
-              <Link to="/cart">
-                <button type="button">CART</button>
-              </Link>
+              <div>
+                <Link to="/cart">
+                  <button type="button">CART</button>
+                </Link>
+                <Link to="/">
+                  <button type="button">GO TO PRODUCTS</button>
+                </Link>
+              </div>
             ) : (
               <ItemCount
                 stock={
