@@ -2,6 +2,8 @@ import products from "../data/MOCK_DATA.json";
 import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import { db } from "../utils/firebaseConfig";
+import { collection, getDocs, query, where, documentId } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
@@ -10,13 +12,15 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     setSpinner(true);
-    new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(products.find((item) => item["id"] === parseInt(itemId)));
-      }, 2000);
-    }).then((res) => {
+    const firstoreFetch = async () => {
+      const productsCollection = query(collection(db, "products"));
+      const requestFilter = query(productsCollection, where(documentId(), "==", itemId));
+      const dataFromFirestore = await getDocs(requestFilter);
+      return dataFromFirestore;
+    };
+    firstoreFetch().then((res) => {
       setSpinner(false);
-      setProduct(res);
+      setProduct(res.docs[0].data());
     });
   }, []);
 

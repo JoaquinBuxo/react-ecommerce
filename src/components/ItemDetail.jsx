@@ -21,9 +21,10 @@ const ItemDetail = (props) => {
     <div className="container-fluid mt-2 mb-3">
       <div className="row no-gutters">
         <div className="col-md-5 pr-2">
-          <div className="card h-100">
+          <div className="card h-50">
             <div className="demo">
               <img
+                className="h-50"
                 src={props.item["item-image"]}
                 alt={props.item["item-name"]}
               />

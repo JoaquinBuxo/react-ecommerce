@@ -2,6 +2,8 @@ import products from "../data/MOCK_DATA.json";
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import { db } from "../utils/firebaseConfig";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [productList, setProductList] = useState([]);
@@ -10,27 +12,22 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     setSpinner(true);
-    if (categoryId === undefined) {
-      new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(products);
-        }, 2000);
-      }).then((res) => {
-        setSpinner(false);
-        setProductList(res);
-      });
-    } else {
-      new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(
-            products.filter((item) => item["category-id"] === categoryId)
-          );
-        }, 2000);
-      }).then((res) => {
-        setSpinner(false);
-        setProductList(res);
-      });
-    }
+    const firstoreFetch = async () => {
+      const productsCollection = query(collection(db, "products"));
+      const requestFilter = categoryId
+        ? query(productsCollection, where("category-id", "==", categoryId))
+        : productsCollection;
+      const dataFiltered = await getDocs(requestFilter);
+      const dataFromFirestore = dataFiltered.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      return dataFromFirestore;
+    };
+    firstoreFetch().then((res) => {
+      setSpinner(false);
+      setProductList(res);
+    });
   }, [categoryId]);
 
   return (
