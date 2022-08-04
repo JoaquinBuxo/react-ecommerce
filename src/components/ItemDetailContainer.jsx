@@ -1,4 +1,3 @@
-import products from "../data/MOCK_DATA.json";
 import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
@@ -14,8 +13,9 @@ const ItemDetailContainer = () => {
     setSpinner(true);
     const firstoreFetch = async () => {
       const productsCollection = query(collection(db, "products"));
-      const requestFilter = query(productsCollection, where(documentId(), "==", itemId));
+      const requestFilter = query(productsCollection, where("id", "==", parseInt(itemId)));
       const dataFromFirestore = await getDocs(requestFilter);
+      console.log(itemId)
       return dataFromFirestore;
     };
     firstoreFetch().then((res) => {

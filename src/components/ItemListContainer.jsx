@@ -1,4 +1,3 @@
-import products from "../data/MOCK_DATA.json";
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
