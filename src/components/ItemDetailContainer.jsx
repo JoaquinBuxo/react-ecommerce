@@ -2,7 +2,14 @@ import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { db } from "../utils/firebaseConfig";
-import { collection, getDocs, query, where, documentId } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  query,
+  where,
+  documentId,
+} from "firebase/firestore";
+import { firestoreFetchOne } from "../utils/firestoreFetch";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
@@ -11,16 +18,9 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     setSpinner(true);
-    const firstoreFetch = async () => {
-      const productsCollection = query(collection(db, "products"));
-      const requestFilter = query(productsCollection, where("id", "==", parseInt(itemId)));
-      const dataFromFirestore = await getDocs(requestFilter);
-      console.log(itemId)
-      return dataFromFirestore;
-    };
-    firstoreFetch().then((res) => {
+    firestoreFetchOne(itemId).then((res) => {
       setSpinner(false);
-      setProduct(res.docs[0].data());
+      setProduct(res);
     });
   }, []);
 

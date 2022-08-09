@@ -21,7 +21,6 @@ const CartContextProvider = ({ children }) => {
   };
 
   const clear = () => {
-    cartList.map((item) => (item.quantity = 0));
     setCartList([]);
   };
 
