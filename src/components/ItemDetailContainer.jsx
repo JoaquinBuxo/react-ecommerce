@@ -25,7 +25,7 @@ const ItemDetailContainer = () => {
   }, []);
 
   return (
-    <div className="container mt-3">
+    <div className="container mt-5 mb-5 pt-5">
       {spinner ? (
         <div className="d-flex justify-content-center">
           <div className="spinner-border" role="status" />

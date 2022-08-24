@@ -1,11 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
+import "../styles/NavBar.css";
+import { useEffect, useState } from "react";
 
 const NavBar = () => {
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-success">
-      <div className="container">
-        <Link to="/" className="navbar-brand">
+    <nav
+      className=
+        "navbar navbar-expand-lg navbar-light bg-light navbar-custome"
+    >
+      <div className="container justify-content-around">
+        <Link to="/" className="navbar-brand mb-0 mr-0 h1">
           Adventure
         </Link>
         <button
@@ -20,7 +26,7 @@ const NavBar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className="collapse navbar-collapse justify-content-between"
+          className="collapse navbar-collapse justify-content-center"
           id="navbarNav"
         >
           <ul className="navbar-nav">
@@ -40,9 +46,9 @@ const NavBar = () => {
               </NavLink>
             </li>
           </ul>
-          <span className="navbar-text">
-            <CartWidget />
-          </span>
+        </div>
+        <div className="navbar-text">
+          <CartWidget />
         </div>
       </div>
     </nav>

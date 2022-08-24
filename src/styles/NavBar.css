@@ -1,0 +1,7 @@
+.navbar-custome {
+  position: fixed;
+  box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%);
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}

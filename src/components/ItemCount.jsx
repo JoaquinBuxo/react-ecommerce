@@ -16,17 +16,18 @@ const ItemCount = (props) => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container">
       <div className="row">
         <div className="col-sm-12">
           <div>(Stock: {props.stock})</div>
           <div className="input-group mb-3">
-            <button className="btn btn-info btn-sm" onClick={removeItem}>
+            <button type="button" className="btn btn-info btn-sm text-white" onClick={removeItem}>
               -
             </button>
             <div className="form-control form-control-sm">{count}</div>
             <button
-              className="btn btn-info btn-sm"
+            type="button"
+              className="btn btn-info btn-sm text-white"
               onClick={addItem}
               disabled={props.stock === 0}
             >
@@ -34,7 +35,8 @@ const ItemCount = (props) => {
             </button>
           </div>
           <button
-            className="btn btn-info btn-sm col-sm-12"
+          type="button"
+            className="btn btn-info btn-sm col-sm-12 text-white"
             onClick={() => props.onAdd(count)}
             disabled={props.stock === 0}
           >
