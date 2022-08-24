@@ -3,6 +3,8 @@
 This project is an ecommerce created with react to test different functionalities of the framework.
 A database has also been created for data management with Firebase.
 
+You can check the result here: https://react-ecommerce-joaquinbuxo.vercel.app
+
 ## Available Scripts
 
 In the project directory, you can run:
