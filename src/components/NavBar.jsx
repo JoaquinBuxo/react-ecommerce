@@ -1,15 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import "../styles/NavBar.css";
-import { useEffect, useState } from "react";
 
 const NavBar = () => {
-
   return (
-    <nav
-      className=
-        "navbar navbar-expand-lg navbar-light bg-light navbar-custome"
-    >
+    <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-custome">
       <div className="container justify-content-around">
         <Link to="/" className="navbar-brand mb-0 mr-0 h1">
           Adventure

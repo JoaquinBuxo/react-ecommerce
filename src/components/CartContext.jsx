@@ -7,10 +7,15 @@ const CartContextProvider = ({ children }) => {
 
   const addItem = (item, quantity) => {
     item.quantity += quantity;
-
     if (!isInCart(item.id)) {
       setCartList([...cartList, item]);
     } else {
+      for (const element of cartList) {
+        if (element.id === item.id) {
+          element.quantity += quantity;
+          break;
+        }
+      }
       setCartList([...cartList]);
     }
   };

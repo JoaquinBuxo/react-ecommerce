@@ -21,7 +21,11 @@ const ItemDetail = (props) => {
     <div className="card mb-3">
       <div className="row no-gutters">
         <div className="col-md-4">
-          <img src={props.item["item-image"]} className="card-img" alt={props.item["item-name"]} />
+          <img
+            src={props.item["item-image"]}
+            className="card-img"
+            alt={props.item["item-name"]}
+          />
         </div>
         <div className="col-md-8">
           <div className="card-body">
@@ -30,10 +34,14 @@ const ItemDetail = (props) => {
             {numProducts > 0 ? (
               <div>
                 <Link to="/cart">
-                  <button type="button" className="btn btn-secondary">CART</button>
+                  <button type="button" className="btn btn-secondary">
+                    CART
+                  </button>
                 </Link>
                 <Link to="/">
-                  <button type="button" className="btn btn-secondary mx-3">GO TO PRODUCTS</button>
+                  <button type="button" className="btn btn-secondary mx-3">
+                    GO TO PRODUCTS
+                  </button>
                 </Link>
               </div>
             ) : (

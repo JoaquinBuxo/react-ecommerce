@@ -1,15 +1,8 @@
 import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
-import { db } from "../utils/firebaseConfig";
-import {
-  collection,
-  getDocs,
-  query,
-  where,
-  documentId,
-} from "firebase/firestore";
 import { firestoreFetchOne } from "../utils/firestoreFetch";
+import Spinner from "./Spinner";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
@@ -26,13 +19,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div className="container mt-5 mb-5 pt-5">
-      {spinner ? (
-        <div className="d-flex justify-content-center">
-          <div className="spinner-border" role="status" />
-        </div>
-      ) : (
-        <ItemDetail item={product} />
-      )}
+      {spinner ? <Spinner /> : <ItemDetail item={product} />}
     </div>
   );
 };

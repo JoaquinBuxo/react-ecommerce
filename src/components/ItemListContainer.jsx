@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { firstoreFetch } from "../utils/firestoreFetch";
+import Spinner from "./Spinner";
 
 const ItemListContainer = () => {
   const [productList, setProductList] = useState([]);
@@ -18,13 +19,7 @@ const ItemListContainer = () => {
 
   return (
     <div className="container mt-5 mb-5 pt-5">
-      {spinner ? (
-        <div className="d-flex justify-content-center">
-          <div className="spinner-border" role="status" />
-        </div>
-      ) : (
-        <ItemList items={productList} />
-      )}
+      {spinner ? <Spinner /> : <ItemList items={productList} />}
     </div>
   );
 };
